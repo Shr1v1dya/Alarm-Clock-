@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Alarm Clock</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Link to external CSS file -->
+        <link rel="stylesheet" href="style.css">
+    </head>
+    
+    <body onload="initializeClock()">
+        <!-- Alarm Clock App Container -->
+        <div class="alarm-container">
+            <!-- Logo -->
+            <img src="download.png">
+
+            <!-- Clock and Alarm Setting Section -->
+            <div class="clock-and-alarm">
+                <!-- Current Date and Time Display -->
+                <div class="datetime">
+                    <div class="date-info">
+                        <span id="dayName">Day</span>,
+                        <span id="month">Month</span>,
+                        <span id="dayNum">00</span>,
+                        <span id="year">Year</span>
+                    </div>
+                    <div class="time">
+                        <span id="hour">00</span>:
+                        <span id="minutes">00</span>:
+                        <span id="seconds">00</span>
+                        <span id="period">AM</span>
+                    </div>
+                    <button id="stopAlarmButton" onclick="stopAlarm()">Stop Alarm</button>
+                </div>
+
+                <!-- Set Alarm Section -->
+                <div class="set-alarm-section">
+                    <div class="column">
+                        <select>
+                            <option value="setHour" selected hidden>Hour</option>
+                        </select>
+                    </div>
+
+                    <div class="column">
+                        <select>
+                            <option value="setMinute" selected hidden>Minute</option>
+                        </select>
+                    </div>
+
+                    <div class="column">
+                        <select>
+                            <option value="AM/PM" selected hidden>AM/PM</option>
+                        </select>
+                    </div>
+
+                    <button id="setAlarmButton" type="submit">Set Alarm</button>
+                </div>
+
+                <!-- Alarm List Display -->
+                <h3 id="alarm-heading"></h3>
+                <div class="alarm-list-container"></div>
+            </div>
+        </div>
+
+        <!-- External JavaScript File -->
+        <script src="scripts.js"></script>
+        
+    
+    </body>
+</html>
+

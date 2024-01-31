@@ -1,0 +1,153 @@
+/* Apply a reset to remove default margins and padding on all elements */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Style the body with flex properties for centering content and a colorful radial gradient background */
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle, rgba(238, 174, 202, 1) 11%, rgba(84, 148, 232, 1) 67%, rgba(148, 173, 233, 1) 100%);
+}
+
+/* Hide the scrollbar */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Style the logo image with fixed width and height */
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100px;
+  height: 100px;
+}
+
+/* Style the main alarm container */
+.alarm-container{
+  border: 3px solid black;
+  border-radius: 8px;
+}
+
+/* Style the date and time display container */
+.datetime {
+  color: black;
+  font-family: "Segoe UI", sans-serif;
+  width: 340px;
+  padding: 15px 10px;
+  font-weight: bold;
+}
+
+/* Style the  information */
+.date-info {
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 3px;
+}
+
+/* Style the time display */
+.time {
+  font-size: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Style individual time components */
+.time span:not(:last-child) {
+  position: relative;
+  max-width: 0 6px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Style the last time component with different font size and uppercase text */
+.time span:last-child {
+  font-size: 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-top: 10px;
+  padding: 0 5px;
+  border-radius: 3px;
+}
+
+/* Style the set alarm section with flex properties and border-radius */
+.set-alarm-section {
+  display: flex;
+  justify-content: space-around;
+  border-radius: 10px;
+}
+
+/* Style dropdowns in the set alarm section */
+.column select {
+  background: #030305;
+  color: #fff;
+  text-align: center;
+  padding: 8px 4px;
+  border: 1px solid #2E94E3;
+  border-radius: 18px;
+}
+
+/* Style buttons used in the app */
+#setAlarmButton, .btn-delete, #stopAlarmButton{
+  padding: 5px;
+  color: black;
+  font-weight: bold;
+  background: #ff82f3;
+  border: 3px solid black;
+  border-radius: 18px;
+}
+
+/* Style the stop alarm button initially hidden and positioned */
+#stopAlarmButton {
+  visibility: hidden;
+  width: 100px;
+  margin: 0 34%;
+}
+
+/* Style the delete button with a left margin */
+.btn-delete {
+  margin-left: 50px;
+}
+
+/* Hover effects for buttons */
+#setAlarmButton:hover, .btn-delete:hover, #stopAlarmButton:hover {
+  cursor: pointer;
+  background: #2E94E3;
+  box-shadow: 0 0 30px #2E94E3;
+}
+
+/* Style the heading in the alarm list section */
+h3 {
+  color: #fff;
+  font-family: "Segoe UI", sans-serif;
+  font-size: 20px;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 3%;
+}
+
+/* Style the container for the list of alarms */
+.alarm-list-container {
+  color: black;
+  margin: 14px auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+/* Style each alarm log in the list */
+.alarmLog {
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 6px auto;
+}
